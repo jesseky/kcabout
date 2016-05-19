@@ -1,0 +1,293 @@
+/* content.css */
+
+div,
+section,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+nav,
+ul,
+ol,
+dl,
+dd,
+dt,
+li,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
+p {
+    padding: 0;
+    margin: 0;
+}
+.kcabout-content {
+    position: fixed;
+    width: 400px;
+    right: -400px;
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    z-index: 9999999;
+    transition: all 0.5s ease;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+.kcabout-error {
+    color: #FF5A5A;
+}
+.kcabout-content-show {
+    right: 0px;
+}
+.kcabout-content-in {
+    padding: 15px;
+}
+.kcabout-content-h1 {
+    text-align: left;
+    display: block;
+    padding-right: 30px;
+    font-size: 24px;
+    color: #72FF32;
+    line-height: 1.5em;
+    border-bottom: 2px solid #72FF32;
+}
+.kcabout-content-cont {
+    margin-top: 20px;
+    color: #FFF;
+}
+.kcabout-content-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-weight: normal;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    text-decoration: none;
+    color: #FF0;
+    font-size: 20px;
+    width: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    text-align: center;
+}
+.kcabout-content-close:hover {
+    transform: rotate(360deg);
+}
+.kcabout-content-loading {
+    text-align: center;
+}
+.kcabout-content-no-details {
+    text-align: center;
+}
+.kcabout-content-article {
+    border-bottom: 1px solid #9A9A9A;
+    color: #DEDEDE;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+}
+.kcabout-content-article a {
+    color: #12B3E6;
+}
+.kcabout-content-article div,
+.kcabout-content-article h1,
+.kcabout-content-article h2,
+.kcabout-content-article h3,
+.kcabout-content-article h4,
+.kcabout-content-article h5,
+.kcabout-content-article h6,
+.kcabout-content-article p,
+.kcabout-content-article a,
+.kcabout-content-article b,
+.kcabout-content-article img,
+.kcabout-content-article span,
+.kcabout-content-article section,
+.kcabout-content-article article {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.kcabout-content-article a[href^="javascript:"],
+.kcabout-content-article a[href^="void:"],
+.kcabout-content-article a[href^="#"] {
+    display: none;
+}
+.kcabout-content-site-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+.kcabout-content-article .kcabout-content-site-details {
+    font-size: 13px;
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #AAA;
+}
+.kcabout-content-article .kcabout-content-details-box:not(:first-child) {
+    margin: 20px 0 0 0;
+    padding: 10px 0 0 0;
+    border-top: 1px dashed #666;
+}
+.kcabout-content-article .kcabout-content-details-loading {
+    line-height: 2em;
+    padding: 20px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* loading animate */
+
+.kcabout-content-article .kcabout-spinner,
+.kcabout-spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #EEE;
+    margin: 10px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+/* douban */
+
+.kcabout-content-article-douban .kcabout-content-site-title {
+    color: #072;
+    font-size: 20px;
+    font-weight: bold;
+}
+.kcabout-content-article-douban .pic {
+    float: left;
+    width: 65px;
+    height: 100px;
+    margin: 0 10px 5px 0;
+}
+.kcabout-content-article-douban .title {
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-weight: normal;
+}
+.kcabout-content-article-douban .title h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: transparent none;
+}
+.kcabout-content-article-douban .rating-info span {
+    background: none;
+}
+.kcabout-content-article-douban .rating-info span.ll {
+    display: none;
+}
+.kcabout-content-article-douban .rating_nums {
+    color: #FF6852;
+}
+.kcabout-content-article-douban .kcabout-content-site-html p {
+    clear: left;
+    margin-bottom: 10px;
+}
+.kcabout-content-article-douban .comment h3 {
+    font-weight: normal;
+    font-size: 12px;
+    background: transparent none;
+    margin: 0;
+    padding: 0;
+}
+.kcabout-content-article-douban .comment-item {
+    border-bottom: 1px dashed #666;
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;
+}
+.kcabout-content-article-douban .review {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px dashed #666;
+}
+.kcabout-content-article-douban .review-hd {
+    float: none;
+    width: auto;
+}
+.kcabout-content-article-douban .review-hd h3 {
+    line-height: 1em;
+    height: 1em;
+    margin: 0 0 5px 0;
+    background: transparent none;
+}
+.kcabout-content-article-douban .review-hd h3 img {
+    border-radius: 100%;
+    border: 2px solid #FFF;
+    width: auto;
+    height: auto;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+}
+.kcabout-content-article-douban .review-hd h3 a:hover {
+    background: transparent none;
+}
+.kcabout-content-article-douban .review-hd h3 a:hover img {
+    border-color: #138BF3;
+    box-shadow: 0 0 5px rgb(19, 139, 243);
+}
+.kcabout-content-article-douban .review-hd-avatar {
+    float: left;
+    margin: 0 10px 0 0;
+}
+.kcabout-content-article-douban .review-hd-info span {
+    background: none;
+    display: inline;
+}
+.kcabout-content-article-douban .review-bd {
+    float: none;
+}
+.kcabout-content-article-douban #comment-forbid-notice {
+    display: none;
+}
+.kcabout-content-article-douban .comment-info span.rating {
+    background: none;
+    display: inline;
+}
+.kcabout-content-article-douban .comment-info span.rating:before,
+.kcabout-content-article-douban .review-hd-info span:before {
+    content: attr(title);
+    color: #FF713A;
+    float: right;
+}
+.kcabout-content-article-douban .review-hd-expand {
+    display: none;
+}
+.kcabout-content-article-douban .review-short-ft {
+    text-align: right;
+}
+.kcabout-content-article-douban .review-more {
+    margin: 10px 0 0 0;
+}

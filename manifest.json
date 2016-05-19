@@ -1,0 +1,44 @@
+{
+    "manifest_version": 2,
+    "name": "关键信息",
+    "version": "1.0",
+    "description": "选择关键词，查询关键信息",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "css": ["content.css"],
+        "js": ["content.js"]
+    }],
+    "browser_action": {
+        "default_icon": "kcabout.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "kcabout.png",
+        "48": "kcabout.png",
+        "128": "kcabout.png"
+    },
+    "commands": {
+        "kcabout": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+K",
+                "mac": "MacCtrl+Shift+K"
+            },
+            "description": "Query Using KcAbout"
+        },
+        "kcabout-hide": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+K",
+                "mac": "MacCtrl+Shift+L"
+            },
+            "description": "Hide KcAbout"
+        }
+    },
+    "permissions": [
+		"activeTab",
+		"contextMenus",
+		"http://api.douban.com/"
+	]
+}
